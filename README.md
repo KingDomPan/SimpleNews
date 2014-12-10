@@ -10,4 +10,4 @@ SimpleNews
 - YangLin 提供了分页类.
 
 
-简单的新闻发布系统, Spring Data + Mongodb 实现, 包含GridFsTemplate文件上传.
+简单的新闻发布系统, Spring Data + Mongodb + JqueryEasyUi 实现, 包含GridFsTemplate文件上传.
