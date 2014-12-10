@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<package name="base" namespace="/" extends="json-default">
+	</package>
+
+	<package name="safeCode" extends="struts-default" namespace="/">
+		<action name="getCode" class="com.qd.news.action.SafeCodeAction"
+			method="getCodeImg">
+		</action>
+	</package>
+
+	<package name="user" extends="base" namespace="/user">
+		<action name="register" class="com.qd.news.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="save" class="com.qd.news.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="findbypage" class="com.qd.news.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="delete" class="com.qd.news.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		<action name="update" class="com.qd.news.action.UserAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+
+
+	<package name="news" extends="base" namespace="/news">
+		<action name="save" class="com.qd.news.action.NewsAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+
+		<action name="findbypage" class="com.qd.news.action.NewsAction">
+			<result type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+	</package>
+	
+	<package name="download" extends="struts-default" namespace="/download">
+		<action name="download" class="com.qd.news.action.DownloadAction">
+		</action>
+	</package>
+</struts>
+	
